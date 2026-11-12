@@ -1,0 +1,17 @@
+# competition data and generated artefacts (never committed)
+wnn_connectome_starterpack/
+data/
+runs/
+tools/preds/
+connectome/kaggle_jobs/*/
+!connectome/kaggle_jobs/build_job.py
+*.zip
+*.pt
+*.npz
+*.bin
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.bak*

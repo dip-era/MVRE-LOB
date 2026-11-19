@@ -10,7 +10,9 @@ networks (GRU and LSTM), and runs them as one fused int8 numba kernel at ~70 µs
 
 | | |
 |---|---|
-| Final public score | **0.66216** weighted Pearson (organisers' GRU baseline: 0.617 on validation) |
+| Final result | **Rank 170 of 5,841 (top 3%)**, private score **0.67099** weighted Pearson |
+| Public score | 0.66216 (rank 206), up 36 places on the private leaderboard |
+| Baseline | organisers' GRU: 0.617 on validation |
 | Inference | 39.4M rows in 46 min on 1 vCPU (limit 60 min), 4.6 MB submission |
 | Members | raw-input GRU · rank-Gaussian LSTM · ZCA-whitened LSTM · change-only GRU |
 
@@ -82,6 +84,10 @@ hurt (−0.0006 on both validation and public).
 | + rank-Gaussian and ZCA views | 0.66160 |
 | LSTMs on the rank and ZCA views | 0.66207 |
 | **+ change-only view (final)** | **0.66216** |
+
+On the final private leaderboard the submission scored **0.67099**, rank **170 of 5,841**. It moved up 36 places
+from its public rank, while many entries tuned to the public leaderboard dropped. Leak-free validation and
+requiring gains on both validation halves kept the model selection honest.
 
 ## Repository layout
 
